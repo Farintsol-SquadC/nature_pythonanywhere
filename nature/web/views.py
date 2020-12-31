@@ -28,6 +28,7 @@ def home(request):
         try:
 
             send_mail("New Form - Nature's Blessing", msg, settings.EMAIL_HOST_USER, ['thenaturesblessing@gmail.com',])
+            # send_mail("New Form - Nature's Blessing", msg, settings.EMAIL_HOST_USER, ['vikas.pandey9323@gmail.com',])
             print('email sent')
             messages.success(request, "Submitted Successfully!!!")
         except:

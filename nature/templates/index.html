@@ -7,7 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
@@ -60,17 +60,22 @@
 
   <!--/container-->
 
+
+  <div id="contact">
+    <div class="container">
+      <br>
+      <div class="row">
           {% if messages %}
     {% for message in messages %}
              {% if message.tags == 'success' %}
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<div class="alert alert-success alert-dismissible" role="alert">
       <strong>Success : </strong> {{ message }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
     {% elif message.tags == 'error' %}
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
+<div class="alert alert-danger alert-dismissible" role="alert">
       <strong>Error : </strong> {{ message }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -79,9 +84,9 @@
     {% endif %}
             {% endfor %}
                {% endif %}
+</div>
+      <br>
 
-  <div id="contact">
-    <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="centered">Contact Form</h2>
