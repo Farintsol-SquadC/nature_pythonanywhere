@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage, send_mail
 # Create your views here.
 from nature import settings
@@ -33,4 +33,5 @@ def home(request):
         except:
             print('exception occured email not sent')
             messages.error(request, "Error in submitting form, Try Again after some time.")
+        return redirect('/')
     return render(request,'index.html')
